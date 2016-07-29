@@ -1,3 +1,7 @@
 public class PezDispenser {
-  public String mCharacterName = "Yoda";
+  private String mCharacterName = "Yoda";
+
+  public String getCharacterName() {
+    return mCharacterName;
+  }
 }
