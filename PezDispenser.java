@@ -5,11 +5,16 @@ public class PezDispenser {
   private String mCharacterName;
 // declare pez count
   private int mPezCount;
-// decalre public class that takes in 1 argument
+// declare public class that takes in 1 argument
   public PezDispenser(String characterName) {
     mCharacterName = characterName;
     mPezCount = 0;
   }
+// declare public method to check if empty
+  public boolean isEmpty() {
+    return mPezCount == 0;
+  }
+
 // decalre a load method that returns nothing but sets count
   public void load() {
     mPezCount = MAX_PEZ;

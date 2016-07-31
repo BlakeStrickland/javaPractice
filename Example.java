@@ -8,5 +8,19 @@ public class Example {
         PezDispenser dispenser = new PezDispenser("Leoardo");
         //Call name method on new object
         System.out.printf("The character is %s \n", dispenser.getCharacterName());
+        //Notify user if empty
+        if (dispenser.isEmpty()){
+          System.out.println("Currently Empty");
+        }
+        //Load pez dispenser
+        System.out.println("Loading...");
+        dispenser.load();
+        //NOTIFY YOU FULL
+        if (!dispenser.isEmpty()) {
+          System.out.println("FULL!");
+        }
+
+
+
     }
 }
