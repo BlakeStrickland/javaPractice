@@ -10,6 +10,16 @@ public class PezDispenser {
     mCharacterName = characterName;
     mPezCount = 0;
   }
+//declare public dispense method
+  public boolean dispense() {
+    boolean wasDispensed = false;
+    if (!isEmpty()) {
+      mPezCount--;
+      wasDispensed = true;
+    }
+    return wasDispensed;
+  }
+
 // declare public method to check if empty
   public boolean isEmpty() {
     return mPezCount == 0;

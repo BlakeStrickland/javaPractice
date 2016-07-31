@@ -19,8 +19,13 @@ public class Example {
         if (!dispenser.isEmpty()) {
           System.out.println("FULL!");
         }
-
-
-
+        // loop through all pez
+        while (dispenser.dispense()) {
+          System.out.println("Om nom nom");
+        }
+        // Notify user no more pez
+        if (dispenser.isEmpty()){
+          System.out.println("So many noms...");
+        }
     }
 }
