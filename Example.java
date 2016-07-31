@@ -27,5 +27,19 @@ public class Example {
         if (dispenser.isEmpty()){
           System.out.println("So many noms...");
         }
+        dispenser.load(4);
+        dispenser.load(2);
+        // loop through all pez
+        while (dispenser.dispense()) {
+          System.out.println("Om nom nom");
+        }
+        // Notify user no more pez
+        try {
+          dispenser.load(400);
+        } catch (IllegalArgumentException iae) {
+          System.out.println("TOO MANY NOMS!!");
+          System.out.printf("The error was; %s", iae.getMessage());
+        }
+
     }
 }

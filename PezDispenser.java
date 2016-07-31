@@ -27,7 +27,15 @@ public class PezDispenser {
 
 // decalre a load method that returns nothing but sets count
   public void load() {
-    mPezCount = MAX_PEZ;
+    load(MAX_PEZ);
+  }
+
+  public void load(int pezAmount) {
+    int newAmount = mPezCount + pezAmount;
+    if (newAmount > MAX_PEZ) {
+      throw new IllegalArgumentException("Too Manyz");
+    }
+    mPezCount = newAmount;
   }
   // declare public method that returns a string object of the charater name
   public String getCharacterName() {
