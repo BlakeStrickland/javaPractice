@@ -5,6 +5,13 @@ public class Prompter {
 
   public Prompter(Game game) {
     mGame = game;
+  }
+
+  public void play() {
+    while (mGame.getRemainingTries() > 0) {
+      displayProgress();
+      promptForGuess();
+    }
 
   }
 
@@ -16,6 +23,6 @@ public class Prompter {
   }
 
   public void displayProgress() {
-    System.out.printf("Try to solve: %s\n", mGame.getCurrentProgress());
+    System.out.printf("You have %d tries left to solve: %s\n", mGame.getRemainingTries(), mGame.getCurrentProgress());
   }
 }
