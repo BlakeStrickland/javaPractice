@@ -13,7 +13,6 @@ public class Game {
     boolean isHit = mAnswer.indexOf(letter) >= 0;
     if (isHit) {
       mHits += letter;
-
     } else {
       mMisses += letter;
     }
